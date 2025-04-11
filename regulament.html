@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regulament | DevlopMe Iași</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link rel="stylesheet" href="css/index.css"> <!--Main css-->
+        <link rel="stylesheet" href="css/navbar.css"> <!--Navbar css-->
+        <link rel="stylesheet" href="css/footer.css"> <!--Footer css-->
+
+        <!-- Font-Awesome -->
+        <script src="https://kit.fontawesome.com/2ee69d0673.js" crossorigin="anonymous"></script>
+
+        <!-- Tiny Slider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    </head>
+    <style>
+
+        .navContainer {
+                width: 100%!important;
+                align-items: center!important;
+                justify-content:space-between!important;
+                padding: 0 50px;
+            }
+            .navContainer a {
+                color: #E8E8E8;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .navContainer a:hover {
+                text-decoration: underline;
+            }
+            .first-title{
+                font-size: 3em;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .titleh2 {
+                margin: 0;
+                margin-top: 100px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            h2{
+                font-size: 2.9em;
+                padding: 0 50px;
+            }
+            p, li{
+                color: white;
+            }
+            p{
+                text-align: justify;
+            }
+            .empty{
+                padding-top: 10%;
+            }
+            .big-div{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .castigatori{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap:40px;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1%;
+                font-size: 2em;
+                white-space: nowrap;
+            }
+            
+            
+            
+            .mergi_coaie{/*Partea amuzanta e ca merge acum */
+                font-size: 1.7em;
+                text-align: center;
+            }
+            .rules{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: space-around;
+                font-size: 1.2em;
+                padding: 0 10%;
+            }
+            
+            .articole{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: flex-start;
+                justify-content: space-around;
+                text-align: justify;
+                padding: 0 10%;
+            }
+            .intro{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: space-around;
+                padding: 5%;
+
+            }
+            .articole h3{
+                text-align: center;
+                font-size: 2em;
+                font-weight:500;
+                color: #F8C401;
+                text-decoration: underline;
+            }
+            .liste{
+                padding-bottom: 10%;
+            }
+            .linker{
+                color: cyan;
+            }
+            .warning{
+                color: red;
+                align-self: center;
+                text-align: center;
+                padding: 0 50px;
+                font-size: 1.2em;
+            }
+
+            .documents a{
+                color: cyan;
+                font-size: 1.2em;
+                display: block;
+                text-align: center;
+
+            }
+
+            .documents h4 {
+                padding: 0 10%;
+                text-align: center;
+            }
+            @media (max-width: 1025px){
+                .castigatori{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 5%;
+                    font-size: 1.5em;
+                    margin: auto;
+                }
+                .articole h3{
+                    font-size: 1.5em;
+                    font-weight:500;
+                    color: #F8C401;
+                    text-decoration: underline;
+                    padding: 7%;
+                }
+                .intro {
+                    padding:7%;
+                }
+                .documents>h4{
+                    padding: 8%;
+                    text-align: center;
+                }
+                .number-7{
+                    padding-left: 10%;
+                }
+            }
+            @media (max-width: 426px){
+                .castigatori{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 1%;
+                    font-size: 1.1em;
+                    margin: auto;
+                }
+                .mergi_coaie{
+                    font-size: 1.2em;
+                    padding: 7%;
+                }
+                .articole h3{
+                    padding-left: 5%;
+                    text-align: center;
+                }
+                .articole p,.articole li{
+                    padding: 7%;
+                }
+            }
+    </style>
+    <body>
+        <navbar class="navbar">
+            <div class="navContainer">
+                <a href="https:\\devme.lsaciasi.ro">
+                    <img class="navlogo" src="img/logo/DevMe/DevMeLogo.png">
+                </a>
+
+                 <a href="https:\\devme.lsaciasi.ro">< Înapoi la pagina principală</a>
+            </div>
+        </navbar>
+        <div class="big-div">
+        <div class="empty">
+        </div>
+	<!-- <h1 class="first-title">Lista candidaților admiși în tabăra de vară pentru liceeni DevelopMe</h1>
+        <h4 class="warning">Atenție! Ordinea participanţilor în lista de mai jos nu are legătură cu punctajele obținute în urma interviurilor. Ordinea este alfabetică.</h4>
+        <ol>
+            <div class="castigatori">
+                <div class="col-l">
+                    <li>Acasandrei Delia-Elena</li>
+                    <li>Agrigoroaie Cosmin-Mihai</li>
+                    <li>Ailenei David Ioan</li>
+                    <li>Bondoc Ștefana</li>
+                    <li>Buema Andreea Alberta</li>
+                    <li>Bujdei Eliza-Anastasia</li>
+                    <li>Burlacu Marian-Razvan</li>
+                    <li>Buzamat Emma</li>
+                    <li>Carja Anamaria-Ionela</li>
+                    <li>Câra Alex- Marian</li>
+                    <li>Ciobanu Andrei-Alexandru</li>
+                    <li>Ciontoiu Paul-Antonio</li>
+                    <li>Clapa Andreea</li>
+                    <li>Cuzepan Cezara-Maria</li>
+                    <li>Decuseara Maria-Ilinca</li>
+                    <li>Despa Anna Stefania</li>
+                    <li>Droangă Răzvan-George</li>
+                    <li>Eid Jennifer Maria</li>
+                    <li>Guţu Matei</li>
+                    <li>Huțanu Andrei-Horia</li>
+                </div>
+                <div class="col-r">
+                    <li>Leșan Livia Andreea</li>
+                    <li>Luca Andrei Alexandru</li>
+                    <li>Mereuță Loredana Andreea</li>
+                    <li>Moscalu Ionela-Georgiana</li>
+                    <li>Moșneguțu Ștefania Alexandra</li>
+                    <li>Nechifor Corina</li>
+                    <li>Olariu Anca Florentina</li>
+                    <li>Oniceag Diana</li>
+                    <li>Patap Irina</li>
+                    <li>Pintilie Ioana-Alexandra</li>
+                    <li>Popescu Radu-Stefan</li>
+                    <li>Pădurariu Jasmina-Maria</li>
+                    <li>Rarita Alexandru</li>
+                    <li>Rusu Alessia-Giada</li>
+                    <li>Teodoritu Georgiana</li> 
+                    <li>Ungureanu Ioan</li>
+                    <li>Varvaroi Rares</li>
+                    <li>Vesel Denis Matei</li>
+                    <li>Vestale Ioana Amalia</li>
+                    <li>Vieru Darius-Petru</li>
+                </div>
+            </div>
+        </ol> -->
+
+        <div class="titleh2">
+            <h2>Regulament de desfășurare<br>
+                Tabăra de Vară Pentru Liceeni “DevelopMe”<br>
+                A treia ediție 2024
+            </h2>
+        </div>
+        <div class="documents">
+            <h4>Regulamentul și acordul parental pot fi descărcate prin accesarea link-urilor de mai jos: </h4><br>
+            <a class="linker" href="_Regulament-DevelopMe.docx">Regulamentul Taberei de vară</a><br>
+            <a class="linker" href="_Acord-Parental.docx">Acordul parental</a><br>
+        </div>
+        <div class="rules">
+            <div class="intro">
+                <p>În 2024 se va desfășura a treia ediție a taberei de vară „DevelopMe(DevMe)”, tabără ce își propune să unească elevi dornici de socializare și de a pătrunde în acest mediu universitar dinainte de a-și alege o facultate.</p>
+                <p>În cadrul acestei tabere principalele activități care vor fi desfășurate sunt cursuri de specialitate la facultate din diverși ani universitari, dar și diferite activități menite să le dezvolte spiritul competitiv, capacitatea de a socializa și de a lucra în echipă, capacitatea de a organiza/planifica diverse evenimente, creativitatea și încrederea în sine.</p>
+                <p>Tabăra va avea loc pe o perioadă de o săptămână și ne propunem să avem un număr de 30 de participanți. Aceștia vor avea un program tipic studentesc, cu ore de dimineața, cursuri de luni  pana vineri, nelipsita mancare de la cantină și nu în ultimul rând: Examenul Final.</p>
+                <p>Pe lângă acestea, printre activitățile propuse vor fi incluse vizite la firme din domeniu, simularea unui eveniment marca LSAC, dar și multe altele menite să le dezvolte tot felul de aptitudini.</p>
+
+            </div>
+            <div class="intro2">
+                <h2 class="mergi_coaie"><b><i>Regulamentul următor este destinat pentru buna desfășurare a Taberei de Vară Pentru Liceeni “DevelopMe”, Ediţia a treia 2024. Următoarele reguli sunt concepute pe baza situațiilor posibile la care ne putem aștepta în cadrul unei tabere.</i></b>
+                </h2>
+            </div>
+            <div class="articole">
+                <h3>Art 1. Înscrierea și selecția participanților</h3>
+                <ol>
+                    <li>Perioada de înscrieri în Tabăra de Vară Pentru Liceeni “DevelopMe” este 1 Aprilie - 30 Aprilie.</li>
+                    <li>Înscrierea participanților se face completând formularul de înscriere de pe site: <a class="linker" href="https://devme.lsaciasi.ro/" target="_blank"> https://devme.lsaciasi.ro/</a></li>
+                    <li>Selecția participanților se va face pe baza răspunsurilor din formularul de înscriere, dar și printr-un interviu online/telefonic.</li>
+                    <li>În urma selecției, organizatorii vor afișa lista cu cei 30 de participanți admiși.</li>
+                    <li>Confirmarea locului în tabără de către participant se va face prin plata taxei de participare și completarea documentelor necesare până la data stabilită de organizator.</li>
+                </ol>
+            </div>
+            <div class="articole">
+                <h3>Art 2. Desfășurarea taberei</h3>
+                <p class="narrow">Participantii nu vor fi lăsați nesupravegheați decât cu înştiinţarea (comunicarea unde vor să meargă, scopul și durata) responsabilului de grup pe distanțe mici (Campus Universitar).</p>
+                <p class="narrow">Activitățile ce vor fi desfășurate se vor face în 6 grupe de câte 5 elevi, fiecare grupa având 2 coordonatori. Pot să existe modificări în anumite circumstanțe. De exemplu, se vor suplimenta organizatorii în caz de nevoie.</p>
+            </div>
+            <div class="articole">
+                <h3>Art 3. Obligațiile participanților: </h3>
+                <ol>
+                    <li>Participanții au obligația de <b>a purta ecusonul</b> atribuit la începutul taberei pe durata activităților cât și pe durata timpului liber, în afara camerei de cămin.</li>
+                    <li>Participanții au obligația de <b>a respecta calendarul de activități</b> al Taberei de Vară Pentru Liceeni “DevelopMe”.</li>
+                    <li>Participanții au obligația de <b>a respecta indicațiile organizatorilor, a coordonatorilor și a profesorilor</b> (în cadrul orelor de curs/laborator). <i>Nerespectarea acestora duce la sancționarea elevului (vezi Art 5).</i></li>
+
+                </ol>
+            </div>
+            <div class="articole">
+                <h3>Art 4. Cazare și masă</h3>
+                <p class="narrow"> 	Pe parcursul desfășurării taberei Taberei de Vară Pentru Liceeni “DevelopMe”, atât participanții, cât și voluntarii, vor avea cazare în căminele din campusul studențesc Tudor Vladimirescu și mese asigurate la cantina campusului.
+                </p>
+                <p class="narrow"> Pe durata prezenței în cămin/cantină, participantii sunt obligați să respecte regulamentele interne. (<a href="https://campus.tuiasi.ro/ghidul-studentului/" target="_blank">Campus TUIaşi</a>).</p>
+            </div>
+            <div class="articole">
+                <h3>Art 5. Sancțiuni:</h3>
+                <p>Organizatorii Taberei de Vară Pentru Liceeni “DevelopMe”  vor avea la dispoziție un sistem de avertisment/sancționare a participanților.</p>
+                <p>Înainte de a da sancțiunea participantului, se va discuta cu acesta, cât și cu organizatorul care este înștiințat în legătură cu incidentul.</p>
+                <p>Aceste sancțiuni vor fi aduse în urma nerespectării regulamentului și a indicațiilor organizatorilor după cum urmează:                </p>
+                <ol>
+                    <li><b>Sancțiunea de tipul “<i>Cei 7 ani de acasă</i>”:</b>(4  avertismente de acest tip duc la excluderea din program)</li>
+                    <ol type="a" class="liste">
+                        <li>Nerespectarea programului și/sau a indicațiilor organizatorilor;</li>
+                        <li>Nerespectarea regulamentelor interne ale spațiilor în care se desfășoară activitățile (cămin, cantină, facultate, etc.).</li>
+                    </ol>
+                    <li><b>Sancțiunea de tipul <i>“Pe maidan era mai bine”</i>:</b>(2 avertismente de acest tip duc la excluderea din program)</li>
+                    <ol type="a" class="liste">
+                        <li>Consum de alcool  -în camin, cantină, facultate;</li>
+                        <li>Comportament neadecvat și agresiv;</li>
+                        <li>Atac verbal (injurii, bullying) față de alte persoane (participanți, organizatori , voluntari, persoane externe taberei precum personal cantina sau cămin sau alte persoane ce se află în perimetrul unei activităţi a taberei);</li>
+                        <li>Părăsirea  activităților sau a spațiului în care se desfășoară programul fără înștiințarea și consimțământul organizatorului/responsabilului de grup.</li>
+                    </ol>
+                    <li><b>Sancțiunea de tipul “<i>Vine Garda</i>”:</b>(1  avertisment de acest tip duce la excluderea din program)</li>
+                    <ol type="a" class="liste">
+                        <li>Comportament agresiv ce duce la altercaţii verbale și fizice faţă de ceilalți participanți sau organizatori;</li>
+                        <li>Relații intime în public sau cămin;</li>
+                        <li>Incidente ce duc la intervenția poliției;</li>
+                        <li>Comercializarea, deținerea sau consumul de substanțe psihoactive (stupefiante);</li>
+                        <li>Furt sau tentativă de furt;</li>
+                        <li>Deținerea de arme albe sau de foc.</li>
+                    </ol>
+                </ol>
+            </div>
+            <div class="articole">
+                <h3>Art 6. Eliminarea din tabără a participantului</h3>
+                <p>Organizatorii pot elimina participanții din tabără dacă pe parcursul desfășurării activităților depășește numărul de sancțiuni permise (vezi ART 5).</p>
+                <p>În funcție de gravitatea faptelor va fi contactat părintele participantului și/sau organele de poliție.</p>
+            </div>
+            <div class="articole number-7">
+                <h3>Art 7. Returnarea taxei de înscriere se poate face doar în  următoarele situații:</h3>
+                <ul>
+                    <li>Participantul renunță la locul din tabără și anunță organizatorii cu minim 14 zile înainte de startul Taberei;</li>
+                    <li>Anularea/amânarea taberei de către organizatori.</li>
+                    <li>Excepționale cauzate de factori externi.</li>
+                </ul>
+            </div>
+            <div class="articole">
+                <h3>Art 8. Forța majoră</h3>
+                <p>Organizatorii au libertatea de a anunța părinții și de a-i suna la orice oră, indiferent de zi, în cazul în care aceștia consideră că este necesar.</p>
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <div class="upper-footer">
+                <div class="lsection">
+                    <h4>Despre LSAC</h4>
+
+                    <p>Liga Studenților Facultății de Automatică și Calculatoare (LSAC) s-a înființat în anul 2005, fiind o organizație studențească, non-guvernamentală, non-profit și apolitică ce dorește să le ofere tuturor o studenție cât mai frumoasă prin intermediul activităților ce sunt organizate anual.</p>
+                    <span>
+                        <p>Maria-Genoveva Munteanu: <span class="footer-tel">0787 610 893</span></p>
+                        <p>Ovidiu Cătăramă: <span class="footer-tel">0741 309 898</span></p>
+                    </span>
+                </div>
+
+                <div class="rsection">
+                    <form class="footer-form" method="POST" action="mail-handler.php">
+                        <h5>Ai vreo întrebare?</h5>
+
+                        <input type="email" placeholder=" Email-ul tău aici" name="email" required>  
+                        <input type="text" placeholder=" Întrebarea ta aici" name="msg" required>
+                        <input type="submit" value="Întreabă-ne" class="form-submit" name="submit">
+                    </form>
+
+                    <h5>Sau verifică profilurile de social media</h5>
+                    <div class="social-media">
+                        <div>
+                            <a href="https://www.facebook.com/DevMeByLSAC" target="_blank"><img src="img/logo/social/facebook.png"></a>
+
+                            <a href="https://www.instagram.com/devmebylsac/" target="_blank"><img src="img/logo/social/instagram.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="lower-footer">
+                    <div class="lelement">
+                        <a href="https:\\lsaciasi.ro" target="_blank">
+                            <img src="img/logo/LSAC/LSAC alb.png">
+                        </a>
+                    </div>
+
+                    <div class="melement">
+                        <div class="pic">
+                            <a href="https:\\devme.lsaciasi.ro">
+                                <img src="img/logo/DevMe/DevMeLogo.png">
+                            </a>
+                        </div>
+
+                        <div class="links">
+                            <a href="https:\\lsaciasi.ro" target="_blank">LSAC website</a>
+                            <a href="https:\\ac.tuiasi.ro" target="_blank">AC website</a>
+                            <a href="https:\\lsaciasi.ro/contact.html" target="_blank">LSAC contact</a>
+                        </div>
+
+                        <div class="copyright">
+                            <p>Copyright  &#169;2024 All rights reserved to LSAC Iasi</p>
+                        </div>
+                    </div>
+
+                    <div class="relement">
+                        <a href="https:\\lsaciasi.ro" target="_blank">  
+                            <img src="img/logo/AC_Iasi.png">
+                       </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </body>
+    
+</html>
