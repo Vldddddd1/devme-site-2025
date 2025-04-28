@@ -1,0 +1,1314 @@
+/* Modern Styles for DevMe Website */
+:root {
+  /* Modern color palette */
+  --primary: #F8C401;
+  --primary-dark: #e0b100;
+  --secondary: #2563EB;
+  --accent: #10B981;
+  --dark: #121212;
+  --dark-lighter: #1E1E1E;
+  --light: #F8F9FA;
+  --light-gray: #E0E0E0;
+  --text-primary: #F8F9FA;
+  --text-secondary: #D1D5DB;
+  
+  /* Modern gradients */
+  --gradient-gold: linear-gradient(135deg, #F8C401 0%, #FFA500 100%);
+  --gradient-dark: linear-gradient(135deg, #121212 0%, #1E1E1E 100%);
+  --gradient-blue: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+  
+  /* Modern shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 5px 15px rgba(248, 196, 1, 0.3);
+  
+  /* Updated spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+/* Global modern styles */
+body {
+  background-color: var(--dark);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden !important;
+}
+
+/* Modern typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  color: var(--primary);
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(248, 196, 1, 0.2);
+}
+
+h2 {
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+}
+
+/* Modern buttons */
+.homebutton {
+  background: var(--gradient-gold) !important;
+  color: var(--dark) !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-gold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  text-align: center !important;
+  max-width: 180px !important;
+  animation: buttonReveal 0.4s ease-out 0.9s forwards !important;
+  opacity: 0;
+}
+
+.homebutton:hover {
+  border-color: var(--primary) !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 7px 15px rgba(248, 196, 1, 0.3) !important;
+}
+
+/* Eliminarea efectului ::after complex */
+.homebutton::after {
+  display: none !important;
+}
+
+/* Revenim la un efect simplu pentru hover */
+.homebutton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.homebutton:hover::before {
+  left: 0;
+}
+
+/* Media queries pentru butonul hero */
+@media screen and (min-width: 650px) {
+  .homebutton {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    max-width: 200px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homebutton {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    max-width: 150px !important;
+  }
+}
+
+/* Stilizare pentru celelalte butoane */
+.form-submit, #myBtn, .sender {
+  background: var(--gradient-gold);
+  color: var(--dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form-submit:hover, #myBtn:hover, .sender:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(248, 196, 1, 0.4);
+}
+
+.form-submit::before, #myBtn::before, .sender::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.form-submit:hover::before, #myBtn:hover::before, .sender:hover::before {
+  left: 0;
+}
+
+/* Stilizare îmbunătățită pentru butonul din footer */
+.form-submit {
+  background: var(--gradient-gold);
+  color: var(--dark);
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(248, 196, 1, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form-submit:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 7px 20px rgba(248, 196, 1, 0.3);
+}
+
+.form-submit:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(248, 196, 1, 0.2);
+}
+
+.form-submit::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+}
+
+.form-submit:hover::after {
+  transform: translateX(100%);
+}
+
+/* Stilizare pentru formularul din footer */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-form input[type="submit"] {
+  background: var(--gradient-gold);
+  color: var(--dark);
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+}
+
+.footer-form input[type="email"],
+.footer-form input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-form input[type="email"]:focus,
+.footer-form input[type="text"]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(248, 196, 1, 0.2);
+}
+
+/* Media queries pentru butoanele din footer */
+@media (max-width: 768px) {
+  .form-submit {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  
+  .footer-form input[type="email"],
+  .footer-form input[type="text"] {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-submit {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Modern navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(18, 18, 18, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navitem {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navitem::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navitem:hover::after {
+  width: 80%;
+}
+
+/* Modern cards for info section */
+.i-signs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.i-signs > div {
+  background-color: var(--dark-lighter);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem 1rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(248, 196, 1, 0.2);
+  overflow: hidden;
+  position: relative;
+  transform-origin: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  max-width: 33%;
+}
+
+.i-signs > div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.i-signs > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-gold);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-signs > div:hover {
+  transform: scale(1.03) translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgba(248, 196, 1, 0.6);
+  z-index: 10;
+}
+
+.i-signs > div:hover::before {
+  height: 6px;
+}
+
+.i-signs i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-signs > div:hover i {
+  transform: scale(1.2);
+}
+
+.i-signs h4 {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.6rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  width: 100%;
+}
+
+.i-signs > div:hover h4 {
+  color: #FFA500;
+}
+
+.i-signs p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 100%;
+}
+
+.i-signs > div:hover p {
+  color: var(--text-primary);
+}
+
+/* Stil pentru prețuri ajustat pentru spațiere mai bună */
+.i-howMuch span[style*="text-decoration: line-through"] {
+  color: #ff4444;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-right: 0.3rem;
+}
+
+.i-howMuch span[style*="font-weight: bold"] {
+  color: #4CAF50;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-signs > div:hover span[style*="font-weight: bold"] {
+  transform: scale(1.1);
+}
+
+/* Media queries îmbunătățite pentru responsivitate */
+@media (max-width: 992px) {
+  .i-signs {
+    width: 95%;
+    gap: 0.8rem;
+  }
+  
+  .i-signs > div {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .i-signs h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .i-signs {
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .i-signs > div {
+    /* width: 100%; */
+    max-width: 100%;
+    margin-bottom: 1rem;
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  
+  .i-signs h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Elimină orice efect care ar putea cauza ieșirea din ecran */
+.i-howMuch::after,
+.i-where::after,
+.i-when::after,
+.i-signs > div::after {
+  display: none !important;
+}
+
+/* Stilizare pentru prețuri (pentru How much?) */
+.i-howMuch span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Adaugă efecte decorative pentru fiecare card */
+.i-howMuch::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(248, 196, 1, 0.1);
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-where::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(248, 196, 1, 0.1);
+  border-radius: 10px;
+  transform: rotate(45deg);
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-when::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(248, 196, 1, 0.05);
+  border-radius: 10px;
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.i-signs > div:hover::after {
+  opacity: 1;
+  transform: scale(1.2) rotate(45deg);
+}
+
+/* Modern how-to steps */
+.howto-step {
+  position: relative;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  background-color: var(--dark-lighter);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: flex;
+  padding: 1.5rem;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.howto-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(248, 196, 1, 0.3);
+}
+
+.howto-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--gradient-gold);
+}
+
+.howto-step-number {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+
+.howto-step-number h3 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.howto-step-line {
+  position: relative;
+  flex: 0 0 1px;
+  margin: 0 1.5rem;
+}
+
+.howto-step-line .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(248, 196, 1, 0.3);
+}
+
+.howto-step-text {
+  flex: 1;
+  padding-left: 1.5rem;
+}
+
+.howto-step-text-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  position: relative;
+}
+
+.howto-step-text-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+}
+
+.howto-step-text-p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 0;
+}
+
+/* Adaugă elemente decorative */
+.howto-step:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(248, 196, 1, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.howto-step:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(37, 99, 235, 0.2);
+  border-radius: 8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.howto-step:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(16, 185, 129, 0.2);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+/* Stilizare modernă pentru titlul How to hack your summer */
+.howto-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.howto-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+}
+
+/* Stilul pentru fiecare pas */
+.howto-step:nth-child(1) {
+  animation: stepSlideInRight 0.8s ease-out forwards;
+}
+
+.howto-step:nth-child(2) {
+  animation: stepSlideInLeft 0.8s ease-out 0.3s forwards;
+}
+
+.howto-step:nth-child(3) {
+  animation: stepSlideInRight 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes stepSlideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes stepSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animații pentru elementele interne */
+.howto-step-number h3 {
+  animation: numberScale 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes numberScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.howto-step-line .line {
+  animation: lineGrow 0.6s ease-out forwards;
+  animation-delay: 0.7s;
+  height: 0%;
+}
+
+@keyframes lineGrow {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.howto-step-text-title {
+  animation: titleFadeIn 0.5s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+.howto-step-text-p {
+  animation: textFadeIn 0.5s ease-out forwards;
+  animation-delay: 1.1s;
+  opacity: 0;
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Îmbunătățiri pentru efectul de hover */
+.howto-step:hover {
+  transform: translateY(-5px);
+  border-color: rgba(248, 196, 1, 0.3);
+}
+
+.howto-step:hover .howto-step-number h3 {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: var(--primary);
+}
+
+.howto-step:hover .howto-step-text-title {
+  color: #FFA500;
+  transition: color 0.3s ease;
+}
+
+.howto-step:hover .line {
+  box-shadow: 0 0 15px rgba(248, 196, 1, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Modern calendar section - Uniformizat complet */
+#calendar {
+  padding: 2rem 0;
+}
+
+#calendar h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+#calendar h2::after {
+  width: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#calendar table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Stilizare universală pentru toate rândurile */
+#calendar tr {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(248, 196, 1, 0.2);
+  transform-origin: center;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Background pentru toate rândurile când nu sunt în hover */
+#calendar tr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.3);
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efect de hover universal pentru toate rândurile */
+#calendar tr:hover {
+  border-color: rgba(248, 196, 1, 0.6);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#calendar tr:hover::before {
+  background-color: var(--dark-lighter);
+}
+
+/* Linia verticală din stânga */
+#calendar tr::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-gold);
+  border-radius: 2px 0 0 2px;
+  opacity: 0.7;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#calendar tr:hover::after {
+  width: 8px;
+  opacity: 1;
+}
+
+#calendar td {
+  padding: 1.25rem 1.5rem;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#calendar .leftc {
+  font-weight: 600;
+  color: var(--primary);
+  width: 30%;
+  position: relative;
+}
+
+#calendar .rightc {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+#calendar .leftc span {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efecte la hover pentru texte */
+#calendar tr:hover .leftc span {
+  color: #FFA500;
+  transform: scale(1.05);
+}
+
+#calendar tr:hover .rightc {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Modern footer */
+.footer {
+  background: var(--gradient-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.upper-footer {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Add modern animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home h1, .hometext, .homebutton {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hometext {
+  animation-delay: 0.2s;
+}
+
+.homebutton {
+  animation-delay: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  font-weight: 700;
+}
+
+/* Modern image hover effects */
+.img-overlay {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 1/1; /* Asigură că imaginea este pătrată */
+  display: block;
+  width: 100%;
+}
+
+.i-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.img-overlay:hover .i-banner {
+  transform: scale(1.05);
+}
+
+/* Optimizare pentru iconițele social media */
+.instaHover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.fa-facebook, .fa-instagram {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-overlay:hover .instaHover {
+  opacity: 1;
+}
+
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.img-overlay:hover::after {
+  opacity: 1;
+}
+
+/* Stilizare pentru secțiunea de carduri în ansamblu */
+.img-junk {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.img-junk a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+/* Stilizare pentru cardurile sociale media independente */
+.social-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 0 auto;
+}
+
+.social-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-card .social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-card .social-icon i {
+  font-size: 24px;
+}
+
+.social-card .fa-facebook {
+  color: #1877F2;
+}
+
+.social-card .fa-instagram {
+  color: #E1306C;
+}
+
+/* Stilizare modernă și elegantă pentru textul DevelopMe din hero */
+.left h1 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.2rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(135deg, #F8C401 0%, #FFA500 50%, #F8C401 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+  transform-origin: left;
+}
+
+.left h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #F8C401, #FFA500);
+  border-radius: 2px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* Îmbunătățiri pentru hometext */
+.left .hometext {
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: row;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.left .hometext span p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: textReveal 0.5s ease-out forwards;
+}
+
+.left .hometext span p:first-child {
+  animation-delay: 0.3s;
+}
+
+.left .hometext span p:last-child {
+  animation-delay: 0.6s;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.left .hometext span p:last-child::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgba(248, 196, 1, 0.7);
+  animation: lineExpand 0.8s ease-out 1.2s forwards;
+}
+
+@keyframes lineExpand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animații pentru imaginea din hero */
+.right .rightIMG {
+  position: relative;
+  animation: floatImage 8s ease-in-out infinite;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.right .rightIMG img {
+  width: clamp(17rem, 27vw, 30rem);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
+  transform: translateZ(0);
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotateY(2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotateY(-2deg);
+  }
+}
+
+/* Animație pentru rama din jurul imaginii */
+.rightIMG::before {
+  content: "";
+  display: block;
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  bottom: -.2vw;
+  left: -1.2vw;
+  border-bottom: 1.5px solid var(--primary);
+  border-left: 1.5px solid var(--primary);
+  opacity: 0.7;
+  animation: framePulse 6s ease-in-out infinite;
+}
+
+.rightIMG::after {
+  content: "";
+  display: block;
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  top: -1.2vw;
+  right: -1.2vw;
+  border-top: 1.5px solid var(--primary);
+  border-right: 1.5px solid var(--primary);
+  opacity: 0.7;
+  animation: framePulse 6s ease-in-out infinite reverse;
+}
+
+@keyframes framePulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Îmbunătățiri pentru responsive design */
+@media screen and (max-width: 992px) {
+  .left h1 {
+    font-size: 3.8rem;
+  }
+  
+  .left .hometext span p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left h1 {
+    font-size: 3.2rem;
+  }
+  
+  .left .hometext span p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .left h1 {
+    font-size: 2.8rem;
+  }
+  
+  .left .hometext span p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animația pentru butonul înscrie-te */
+@keyframes buttonReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
