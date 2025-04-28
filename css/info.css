@@ -13,7 +13,7 @@
 
 .i-title h2 {
     display:inline-block;
-    border-bottom: 2px solid var(--cement-white);
+    border-bottom: 2px solid transparent/*var(--cement-white)*/;
     margin: 0;
     width: min-content;
     opacity:0;
@@ -151,7 +151,7 @@
     position: absolute;
     height: 1px;
     width: 100%;
-    background: var(--cement-white);
+    background: transparent;/* var(--cement-white); */
     top: 53%;
     left: 0;
 }
@@ -186,9 +186,16 @@
     justify-content: center;
 }
 
-.howto-step-number h3 {
+/* .howto-step-number h3 {
     border-bottom: 1px solid var(--cement-white);
-}
+} */
+
+@media screen and (max-width: 480px) {
+    .howto-step-number h3 {
+        text-align: center;
+        padding-left: 15%;
+    }
+  }
 
 .howto-step-line {
     flex: 1;
@@ -240,6 +247,7 @@
     position: relative;
     text-align: center;
     opacity: 0;
+    margin-bottom: -3%;
   }
   
   .video-title::before {
@@ -247,7 +255,7 @@
     position: absolute;
     height: 1px;
     width: 100%;
-    background: var(--cement-white);
+    /* background: var(--cement-white); */
     top: 53%;
     left: 0;
   }
