@@ -928,11 +928,14 @@ h2::after {
 #calendar .rightc {
   color: var(--text-primary);
   font-weight: 400;
+  text-align: center;
 }
 
 #calendar .leftc span {
   position: relative;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  text-wrap: balance;
 }
 
 /* Efecte la hover pentru texte */
